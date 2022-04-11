@@ -15,7 +15,7 @@ class Task7
         } else {
             unset($arr[$position]);
             $arr = array_values($arr);
-            return "$" . "arr=" . "[" . implode(",", $arr) . "];";
+            return "$"."arr=[" . implode(",", $arr) . "];";
         }
     }
 }
