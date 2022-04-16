@@ -1,32 +1,8 @@
-<?php
+Task 3. Write a PHP program to add the digits by absolute of an integer repeatedly until the result has a single digit.
 
-namespace Task;
+For example,
+Input: 5689
+Output: 1
+Explanation: 5689=5+6+8+9=28=2+8=10=1+0=1
 
-use Exception;
-
-class Task3
-{
-    /**
-     * @throws Exception
-     */
-    public static function main($number): int
-    {
-        $sum = 0;
-        if (!is_int($number)) {
-            throw new Exception("incorrect input data");
-        }
-        if ($number < 0) {
-            throw new Exception('incorrect input data');
-        }
-            while ($number > 0 || $sum > 9) {
-                if ($number == 0) {
-                    $number = $sum;
-                    $sum = 0;
-                }
-                $sum += $number % 10;
-                $number /= 10;
-            }
-            return $sum;
-    }
-}
-//echo Task3::main(-77);
+Func args: (int $number)
