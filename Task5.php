@@ -19,7 +19,6 @@ class Task5
             $fib1 = $fib2;
             $fib2 = $sum;
         }
-
         return $fib2;
     }
 }
