@@ -8,7 +8,8 @@ class Task2
     {
         $today = time();
         $diff = strtotime($date) - $today;
+
         return abs(round($diff / 86400));
     }
 }
-Task2::main();
+//Task2::main();
