@@ -4,7 +4,7 @@ namespace Task;
 
 class Task2
 {
-    public static function main($date): string
+    public static function main(string $date): int
     {
         $today = time();
         $diff = strtotime($date) - $today;
@@ -12,4 +12,4 @@ class Task2
         return abs(round($diff / 86400));
     }
 }
-//Task2::main();
+//echo Task2::main('16-05-2022');
