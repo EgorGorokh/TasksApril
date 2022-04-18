@@ -4,7 +4,7 @@ namespace Task;
 
 class Task9
 {
-    public static function main(array $arr,int $number)
+    public static function main(array $arr, int $number)
     {
         if (!is_array($arr) || count($arr) < 3) {
             throw new Exception('incorrect input data');
@@ -31,4 +31,4 @@ class Task9
         }
     }
 }
-Task9::main([2,7,7,1,8,2,7,8,7],16);
+//Task9::main([2,7,7,1,8,2,7,8,7],16);
