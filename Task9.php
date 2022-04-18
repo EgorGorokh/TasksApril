@@ -2,33 +2,26 @@
 
 namespace Task;
 
-class Task9
+class Task10
 {
-    public static function main($arr, $number)
+    public static function main(int $input)
     {
-        if (!is_array($arr) || count($arr) < 3) {
+        if (!is_int($input) || $input <= 1) {
             throw new Exception('incorrect input data');
         }
-        if (!is_int($number)) {
-            throw new Exception('incorrect input data');
-        }
-        $count = 0; //счетчик сколько таких сумм
-        for ($i = 0; $i < count($arr) - 2; $i++) {
-            if (($arr[$i] + $arr[$i + 1] + $arr[$i + 2]) == $number) {
-                $count++;
+        $count = 0; //счетчик
+        echo 'Array' . '<br>' . '(' . '<br>' . '[0] => ' . $input . '<br>';
+        while ($input !== 1) {
+            $count++;
+            if ($input % 2 == 0) {
+                $input = $input / 2;
+            } else {
+                $input = $input * 3 + 1;
             }
+            echo '[' . $count . '] => ' . $input . '<br>';
         }
-        if ($count > 0) {
-            $count = 0; //обнуляем счетчик
-            echo 'Array' . '<br>' . '(' . '<br>';
-            for ($i = 0; $i < count($arr) - 2; $i++) {
-                if (($arr[$i] + $arr[$i + 1] + $arr[$i + 2]) == $number) {
-                    echo '[' . $count . '] ' . '=> ' . $arr[$i] . ' + ' . $arr[$i + 1] . ' + ' . $arr[$i + 2] . '<br>';
-                    $count++;
-                }
-            }
-            echo ')';
-        }
+        echo ')';
     }
 }
-//Task9::main();
+
+//echo Task10::main(55);
