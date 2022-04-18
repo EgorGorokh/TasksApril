@@ -9,7 +9,7 @@ class Task3
     /**
      * @throws Exception
      */
-    public static function main($number): int
+    public static function main(int $number): int
     {
         $sum = 0;
         if (!is_int($number)) {
