@@ -4,7 +4,7 @@ namespace Task;
 
 class Task8
 {
-    public static function main($json)
+    public static function main(string $json)
     {
         if (!is_string($json) && !is_array(json_decode($json, true))) {
             throw new Exception('incorrect input data');
@@ -15,10 +15,11 @@ class Task8
         }
         $books = json_decode($json, true);
         array_walk_recursive($books, 'Task\bookArray');
+
     }
 }
 
-Task8::main('{
+ Task8::main('{
 "Title": "The Cuckoos Calling",
 "Author": "Robert Galbraith",
 "Detail": {
