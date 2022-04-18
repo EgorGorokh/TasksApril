@@ -4,7 +4,7 @@ namespace Task;
 
 class Task7
 {
-    public static function main($arr, $position)
+    public static function main(array $arr, int $position): string
     {
         if (!is_array($arr)) {
             throw new Exception('incorrect input data');
@@ -22,4 +22,4 @@ class Task7
     }
 }
 
-// Task7::main([1,2,3],5);
+//Task7::main([1,2,3],2);
