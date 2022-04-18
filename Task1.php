@@ -4,7 +4,7 @@ namespace Task;
 
 class Task1
 {
-    public static function main($inputNumber): string
+    public static function main(int $inputNumber): string
     {
         if (!is_int($inputNumber)) {
             throw new Exception('incorrect input data');
