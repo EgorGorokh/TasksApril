@@ -19,10 +19,10 @@ class Task8
     }
 }
 
- Task8::main('{
+ /*Task8::main('{
 "Title": "The Cuckoos Calling",
 "Author": "Robert Galbraith",
 "Detail": {
 "Publisher": "Little Brown"
 }
-}');
+}');*/
