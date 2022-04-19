@@ -1,6 +1,6 @@
 <?php
 
-namespace Task;
+namespace src;
 
 class Task12
 {
@@ -8,7 +8,7 @@ class Task12
     public $_fval;
     public $_sval;
 
-    public function __construct($fval, $sval)
+    public function __construct(int $fval, int $sval)
     {
         $this->_fval = $fval;
         $this->_sval = $sval;
@@ -30,6 +30,7 @@ class Task12
             }
             $this->tank = $this->tank * 1 + $float;
         }
+
         return $this;
     }
 
@@ -57,6 +58,7 @@ class Task12
             }
             $this->tank = $this->tank * $float;
         }
+
         return $this;
     }
     /**
@@ -75,6 +77,7 @@ class Task12
             }
             $this->tank = $this->tank / $float;
         }
+
         return $this;
     }
 }
