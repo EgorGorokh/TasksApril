@@ -1,6 +1,6 @@
 <?php
 
-namespace Task;
+namespace src;
 
 class Task5
 {
@@ -24,4 +24,4 @@ class Task5
     }
 }
 
-Task5::main();
+//Task5::main();
