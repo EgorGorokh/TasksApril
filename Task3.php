@@ -1,14 +1,9 @@
 <?php
 
-namespace Task;
-
-use Exception;
+namespace src;
 
 class Task3
 {
-    /**
-     * @throws Exception
-     */
     public static function main(int $number): int
     {
         $sum = 0;
