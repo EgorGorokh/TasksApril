@@ -1,6 +1,6 @@
 <?php
 
-namespace Task;
+namespace src;
 
 require_once 'Task11_1.php';
 
