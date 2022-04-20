@@ -19,11 +19,19 @@ class Task2
 
 
         $today = time();
+        // echo $today;
         $diff = strtotime($date) - $today;
-        if ($diff < 0) {
+
+        if ($diff < -86400) {
             throw new \InvalidArgumentException();
         }
+        if ($diff > -86400 && $diff < 0) {
+            return 0;
+        }
 
-        return abs(round($diff / 86400));
+        return abs(round($diff / 86400)) + 1;
     }
 }
+
+
+//echo Task2::main('2022-04-22');
