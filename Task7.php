@@ -4,7 +4,7 @@ namespace src;
 
 class Task7
 {
-    public static function main(array $arr, int $position): array
+    public static function main(array $arr, $position): array
     {
         if (!is_array($arr)) {
             throw new \InvalidArgumentException();
