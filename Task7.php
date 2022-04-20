@@ -4,7 +4,7 @@ namespace src;
 
 class Task7
 {
-    public static function main(array $arr, int $position): string
+    public static function main(array $arr, int $position): array
     {
         if (!is_array($arr)) {
             throw new Exception('incorrect input data');
@@ -16,10 +16,7 @@ class Task7
             throw new Exception('incorrect input data');
         }
         unset($arr[$position]);
-        $arr = array_values($arr);
 
-        return '$' . 'arr=[' . implode(',', $arr) . '];';
+        return array_values($arr);
     }
 }
-
-//Task7::main([1,2,3],2);
