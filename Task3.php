@@ -2,13 +2,21 @@
 
 namespace src;
 
+use Exception;
+
 class Task3
 {
-    public static function main(int $number): int
+    /**
+     * @throws Exception
+     */
+    public static function main($number): int
     {
         $sum = 0;
-        if (!is_int($number) || ($number < 10)) {
-            throw new InvalidArgumentException('incorrect input data');
+        if (!is_int($number)) {
+            throw new Exception('incorrect input data');
+        }
+        if ($number < 10) {
+            throw new Exception('incorrect input data');
         }
         while ($number > 0 || $sum > 9) {
             if ($number == 0) {
@@ -22,4 +30,5 @@ class Task3
         return $sum;
     }
 }
-//echo Task3::main(5);
+
+//echo Task3::main(-22);
