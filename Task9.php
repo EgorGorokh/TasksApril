@@ -4,7 +4,7 @@ namespace src;
 
 class Task9
 {
-    public static function main(array $arr, int $number)
+    public static function main($arr, $number)
     {
         if (!is_array($arr) || count($arr) < 3) {
             throw new \InvalidArgumentException();
@@ -21,7 +21,8 @@ class Task9
                 $count++;
             }
         }
-        // print_r($arr1);
+         print_r($arr1);
+        /*
         if ($count > 0) {
             $count = 0; //обнуляем счетчик
             echo 'Array' . '<br>' . '(' . '<br>';
@@ -32,7 +33,7 @@ class Task9
                 }
             }
             echo ')';
-        }
+        }*/
 
         return $arr1;
     }
