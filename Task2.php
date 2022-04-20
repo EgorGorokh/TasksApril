@@ -14,14 +14,14 @@ class Task2
         $numbers = explode('-', $date);
 
         if (!checkdate($numbers[1], $numbers[2], $numbers[0])) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
 
 
         $today = time();
         $diff = strtotime($date) - $today;
         if ($diff < 0) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
 
         return abs(round($diff / 86400));
