@@ -4,7 +4,7 @@ namespace src;
 
 class Task7
 {
-    public static function main(array $arr, $position): array
+    public static function main(array $arr, int $position): array
     {
         if (!is_array($arr)) {
             throw new \InvalidArgumentException();
@@ -17,10 +17,10 @@ class Task7
         }
         unset($arr[$position]);
 
-        // return array_values($arr);
+        return array_values($arr);
         //for ($i = 0; $i < count($arr); $i++) {
         //    echo $arr[$i] . "<br>";
         // }
-        return $arr;
+        //return $arr;
     }
 }
