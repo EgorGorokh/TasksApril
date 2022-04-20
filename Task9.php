@@ -12,7 +12,14 @@ class Task9
         if (!is_int($number)) {
             throw new \InvalidArgumentException();
         }
-
+        if ($number <= 0) {
+            throw new \InvalidArgumentException();
+        }
+        for ($i = 0; $i < count($arr);$i++) {
+            if ($arr[$i] < 0) {
+                throw new \InvalidArgumentException();
+            }
+        }
         $arr1 = [];
         $count = 0; //счетчик сколько таких сумм
         for ($i = 0; $i < count($arr) - 2; $i++) {
@@ -38,5 +45,3 @@ class Task9
         return $arr1;
     }
 }
-
-//Task9::main([2, 7, 7, 1, 8, 2, 7, 8, 7], 16);
