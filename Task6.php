@@ -1,6 +1,6 @@
 <?php
 
-namespace src;
+namespace Task;
 
 use DateInterval;
 use DatePeriod;
@@ -9,19 +9,22 @@ use Exception;
 
 class Task6
 {
-    public static function main(int $year, int $lastYear, int $month, int $lastMonth, $day = 'Monday')
+    /**
+     * @throws Exception
+     */
+    public static function main($year, $lastYear, $month, $lastMonth, $day = 'Monday')
     {
         if (!is_int($year) || $year < 0) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($lastYear) || $lastYear < $year) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($month) || $month < 1 || $month > 12) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($lastMonth) || $lastMonth < 1 || $lastMonth > 12) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
 
         $period = new DatePeriod(
@@ -30,7 +33,7 @@ class Task6
             new DateTime($lastYear . '-' . $lastMonth . '-29')
         );
 
-        function dayofweek($d, $m, $y)//функция определяет является ли день понедельником 1-да, 0-нет
+        function dayofweek($d, $m, $y): int//функция определяет является ли день понедельником 1-да, 0-нет
         {
             static $t = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
             $y -= $m < 3;
@@ -47,16 +50,16 @@ class Task6
             $day = dayofweek($d, $m, $y);
             if ($day == 1 && $d == 1) {
                 $count++;
-                $arrayMondays[] = $value->format('d.m.Y');
+                $arrayMondays[] = $value->format('Y.m.d');
             }
         }
         $arrayMondays[0] = $count;
-        for ($i = 0; $i < count($arrayMondays); $i++) {
-            echo $arrayMondays[$i] . '<br>';
-        }
+        /*
+                for($i=0;$i<count($arrayMondays);$i++){
+                echo $arrayMondays[$i].'<br>';
+            }
 
+                print_r( $arrayMondays);*/
         return $arrayMondays;
     }
 }
-
-//echo Task6::main(2000, 2002, 1, 10);
