@@ -4,7 +4,7 @@ namespace src;
 
 class Task10
 {
-    public static function main(int $input)
+    public static function main($input)
     {
         if (!is_int($input) || $input <= 1) {
             throw new \InvalidArgumentException();
@@ -26,3 +26,5 @@ class Task10
         return $arr1;
     }
 }
+
+//Task10::main(12);
