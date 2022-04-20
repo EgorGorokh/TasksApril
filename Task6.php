@@ -30,7 +30,7 @@ class Task6
         $period = new DatePeriod(
             new DateTime($year . '-' . $month . '-01'),
             new DateInterval('P1D'),
-            new DateTime($lastYear . '-' . $lastMonth . '-29')
+            new DateTime($lastYear . '-' . $lastMonth . '-28')
         );
 
         function dayofweek($d, $m, $y): int//функция определяет является ли день понедельником 1-да, 0-нет
