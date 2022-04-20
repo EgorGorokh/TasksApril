@@ -4,7 +4,7 @@ namespace src;
 
 class Task5
 {
-    public static function main(int $n = 100, array $arr = [1, 1]): string
+    public static function main($n = 100, array $arr = [1, 1]): string
     {
         if (!is_int($n)) {
             throw new \InvalidArgumentException();
