@@ -13,10 +13,10 @@ class Task3
     {
         $sum = 0;
         if (!is_int($number)) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if ($number < 10) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         while ($number > 0 || $sum > 9) {
             if ($number == 0) {
