@@ -7,10 +7,12 @@ class Task10
     public static function main(int $input)
     {
         if (!is_int($input) || $input <= 1) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         $count = 0; //счетчик
-        echo 'Array' . '<br>' . '(' . '<br>' . '[0] => ' . $input . '<br>';
+        $arr1 = [];
+        $arr1[] = $input;
+
         while ($input !== 1) {
             $count++;
             if ($input % 2 == 0) {
@@ -18,10 +20,9 @@ class Task10
             } else {
                 $input = $input * 3 + 1;
             }
-            echo '[' . $count . '] => ' . $input . '<br>';
+            $arr1[] = $input;
         }
-        echo ')';
+        //  print_r($arr1);
+        return $arr1;
     }
 }
-
-//Task10::main();
