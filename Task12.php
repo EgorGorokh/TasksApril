@@ -26,7 +26,7 @@ class Task12
             $this->tank = $this->_fval + $this->_sval;
         } else {
             if (!is_int($float)) {
-                throw new Exception('incorrect input data');
+                throw new \InvalidArgumentException();
             }
             $this->tank = $this->tank * 1 + $float;
         }
@@ -40,7 +40,7 @@ class Task12
             $this->tank = $this->_fval - $this->_sval;
         } else {
             if (!is_int($float)) {
-                throw new Exception('incorrect input data');
+                throw new \InvalidArgumentException();
             }
             $this->tank = $this->tank * 1 - $float;
         }
@@ -54,7 +54,7 @@ class Task12
             $this->tank = $this->_fval * $this->_sval;
         } else {
             if (!is_int($float)) {
-                throw new Exception('incorrect input data');
+                throw new \InvalidArgumentException();
             }
             $this->tank = $this->tank * $float;
         }
@@ -70,10 +70,10 @@ class Task12
             $this->tank = $this->_fval / $this->_sval;
         } else {
             if (!is_int($float)) {
-                throw new Exception('incorrect input data');
+                throw new \InvalidArgumentException();
             }
             if ($float == 0) {
-                throw new Exception('incorrect input data');
+                throw new \InvalidArgumentException();
             }
             $this->tank = $this->tank / $float;
         }
