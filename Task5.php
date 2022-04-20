@@ -9,7 +9,7 @@ class Task5
         if (!is_int($n)) {
             throw new Exception('incorrect input data');
         }
-        if ($n < 0) {
+        if ($n <= 0) {
             throw new Exception('incorrect input data');
         }
         $fib1 = '1';
