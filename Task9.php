@@ -21,7 +21,7 @@ class Task9
                 $count++;
             }
         }
-         print_r($arr1);
+        //print_r($arr1);
         /*
         if ($count > 0) {
             $count = 0; //обнуляем счетчик
