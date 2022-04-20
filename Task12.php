@@ -61,13 +61,18 @@ class Task12
 
         return $this;
     }
+
     /**
      * @throws Exception
      */
-    public function divide($float = null)
+    public function divideBy($float = null)
     {
         if ($float == null) {
-            $this->tank = $this->_fval / $this->_sval;
+            if ($this->_sval == 0) {
+                throw new \InvalidArgumentException();
+            } else {
+                $this->tank = $this->_fval / $this->_sval;
+            }
         } else {
             if (!is_int($float)) {
                 throw new \InvalidArgumentException();
@@ -82,5 +87,5 @@ class Task12
     }
 }
 
-//$mycalc = new Task12(12, 3);
-//echo $mycalc->multiply()->subtract(1);
+//$mycalc = new Task12(12, 0);
+//echo $mycalc->divideBy();
