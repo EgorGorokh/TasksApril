@@ -33,7 +33,7 @@ class Task6
             new DateTime($lastYear . '-' . $lastMonth . '-28')
         );
 
-        function dayofweek($d, $m, $y): int//функция определяет является ли день понедельником 1-да, 0-нет
+        function dayoffwek($d, $m, $y): int//функция определяет является ли день понедельником 1-да, 0-нет
         {
             static $t = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
             $y -= $m < 3;
@@ -47,7 +47,7 @@ class Task6
             $y = $value->format('Y');
             $m = $value->format('m');
             $d = $value->format('d');
-            $day = dayofweek($d, $m, $y);
+            $day = dayoffwek($d, $m, $y);
             if ($day == 1 && $d == 1) {
                 $count++;
                 $arrayMondays[] = $value->format('Y.m.d');
@@ -55,11 +55,13 @@ class Task6
         }
         $arrayMondays[0] = $count;
         /*
-                for($i=0;$i<count($arrayMondays);$i++){
-                echo $arrayMondays[$i].'<br>';
-            }
+                for ($i = 0; $i < count($arrayMondays); $i++) {
+                    echo $arrayMondays[$i] . '<br>';
+                }*/
 
-                print_r( $arrayMondays);*/
+        //print_r( $arrayMondays);
         return $arrayMondays;
     }
 }
+
+//Task6::main(2000, 2003, 1, 3);
