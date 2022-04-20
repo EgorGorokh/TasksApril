@@ -7,10 +7,7 @@ class Task3
     public static function main(int $number): int
     {
         $sum = 0;
-        if (!is_int($number)) {
-            throw new Exception('incorrect input data');
-        }
-        if ($number < 0) {
+        if (!is_int($number) || ($number < 10)) {
             throw new Exception('incorrect input data');
         }
         while ($number > 0 || $sum > 9) {
@@ -25,4 +22,4 @@ class Task3
         return $sum;
     }
 }
-//echo Task3::main(-77);
+//echo Task3::main(5);
