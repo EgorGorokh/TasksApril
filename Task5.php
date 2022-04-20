@@ -7,10 +7,10 @@ class Task5
     public static function main(int $n = 100, array $arr = [1, 1]): string
     {
         if (!is_int($n)) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if ($n <= 0) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         $fib1 = '1';
         $fib2 = '1';
@@ -24,4 +24,4 @@ class Task5
     }
 }
 
-//Task5::main();
+//echo Task5::main(1);
