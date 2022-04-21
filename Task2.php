@@ -1,4 +1,3 @@
-
 <?php
 
 namespace src;
@@ -33,6 +32,9 @@ class Task2
         return abs(round($diff / 86400));
     }
 }
+
+
+//echo Task2::main('2022-04-24');
 
 
 //echo Task2::main('2022-12-2');
