@@ -1,4 +1,5 @@
-<?<?php
+
+<?php
 
 namespace src;
 
@@ -34,4 +35,4 @@ class Task2
 }
 
 
-//echo Task2::main('2022-04-20');
+//echo Task2::main('2022-12-2');
