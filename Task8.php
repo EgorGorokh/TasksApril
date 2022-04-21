@@ -56,7 +56,7 @@ class Task8
             if (is_object($value)) {
                 foreach ($value as $field_ob => $value_ob) {
                     //  echo/* $field . ' -> ' .*/ $field_ob . ' : ' . $value_ob . '</br>';
-                    $st = $st . $field_ob . ': ' . $value_ob."\r\n";
+                    $st = $st . $field_ob . ': ' . $value_ob;
                 }
             }
         }
