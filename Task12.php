@@ -34,7 +34,7 @@ class Task12
         return $this;
     }
 
-    public function subtract($float = null)
+    public function minus($float = null)
     {
         if ($float == null) {
             $this->tank = $this->_fval - $this->_sval;
