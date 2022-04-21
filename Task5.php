@@ -1,10 +1,10 @@
-<?php
+?php
 
 namespace src;
 
 class Task5
 {
-    public static function main($n = 100, array $arr = [1, 1]): string
+    public static function main($n, array $arr = [1, 1]): string
     {
         if (!is_int($n)) {
             throw new \InvalidArgumentException();
@@ -15,7 +15,8 @@ class Task5
         $fib1 = '1';
         $fib2 = '1';
         while (mb_strlen($fib2) < $n) {
-            $sum = bcadd($fib1, $fib2);
+            //$sum = bcadd($fib1, $fib2);
+            $sum = $fib1 + $fib2;
             $fib1 = $fib2;
             $fib2 = $sum;
         }
@@ -24,4 +25,4 @@ class Task5
     }
 }
 
-//echo Task5::main(1);
+//echo Task5::main(12);
