@@ -41,7 +41,7 @@ class Task8
             //если скалярное значение
             if (is_scalar($value) or is_null($value)) {
                 // echo $field . ' : ' . $value . '</br>';
-                $st = $st . $field . ': ' . $value . '</br>';
+                $st = $st . $field . ': ' . $value."\r\n";
             }
             //если массив
             if (is_array($value)) {
@@ -56,11 +56,12 @@ class Task8
             if (is_object($value)) {
                 foreach ($value as $field_ob => $value_ob) {
                     //  echo/* $field . ' -> ' .*/ $field_ob . ' : ' . $value_ob . '</br>';
-                    $st = $st . $field_ob . ': ' . $value_ob . '</br>';
+                    $st = $st . $field_ob . ': ' . $value_ob."\r\n";
                 }
             }
         }
         // echo '<br>'.$st.'<br>';
+
         return $st;
         //print_r($books);
         //  echo '<br>';
@@ -70,11 +71,10 @@ class Task8
         // print_r($books);
     }
 }
-/*
-Task8::main('{
+ echo Task8::main('{
 "Title": "The Cuckoos Calling",
 "Author": "Robert Galbraith",
 "Detail": {
 "Publisher": "Little Brown"
 }
-}');*/
+}');
