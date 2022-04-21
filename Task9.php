@@ -24,7 +24,7 @@ class Task9
         $count = 0; //счетчик сколько таких сумм
         for ($i = 0; $i < count($arr) - 2; $i++) {
             if (($arr[$i] + $arr[$i + 1] + $arr[$i + 2]) == $number) {
-                $arr1[] = $arr[$i].' + '.$arr[$i + 1].' + '.$arr[$i + 2].' = '.$number;
+                $arr1[] = [$arr[$i].' + '.$arr[$i + 1].' + '.$arr[$i + 2].' = '.$number];
                 $count++;
             }
         }
@@ -45,3 +45,5 @@ class Task9
         return $arr1;
     }
 }
+
+print_r(Task9::main([2, 7, 7, 1, 8, 2, 7, 8, 7], 16));
