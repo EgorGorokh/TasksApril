@@ -8,11 +8,17 @@ class Task12
     public $_fval;
     public $_sval;
 
-    public function __construct(int $fval, int $sval)
+    public function __construct($fval, $sval)
     {
         $this->_fval = $fval;
         $this->_sval = $sval;
         $this->tank = '';
+        if (!is_int($this->_sval)) {
+            throw new \InvalidArgumentException();
+        }
+        if (!is_int($this->_fval)) {
+            throw new \InvalidArgumentException();
+        }
     }
 
     public function __toString()
@@ -20,72 +26,89 @@ class Task12
         return $this->tank;
     }
 
-    public function add($float = null)
+    public function add()
     {
-        if ($float == null) {
-            $this->tank = $this->_fval + $this->_sval;
-        } else {
-            if (!is_int($float)) {
-                throw new \InvalidArgumentException();
-            }
-            $this->tank = $this->tank * 1 + $float;
-        }
+        $this->tank = $this->_fval + $this->_sval;
 
         return $this;
     }
 
-    public function minus($float = null)
+    public function addBy($float)
     {
-        if ($float == null) {
-            $this->tank = $this->_fval - $this->_sval;
-        } else {
-            if (!is_int($float)) {
-                throw new \InvalidArgumentException();
-            }
-            $this->tank = $this->tank * 1 - $float;
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
         }
+        $this->tank = $this->tank * 1 + $float;
 
         return $this;
     }
 
-    public function multiply($float = null)
+    public function subtract()
     {
-        if ($float == null) {
-            $this->tank = $this->_fval * $this->_sval;
-        } else {
-            if (!is_int($float)) {
-                throw new \InvalidArgumentException();
-            }
-            $this->tank = $this->tank * $float;
-        }
+        $this->tank = $this->_fval - $this->_sval;
 
         return $this;
     }
+
+    public function subtractBy($float)
+    {
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->tank = $this->tank * 1 - $float;
+
+        return $this;
+    }
+
+
+    public function multiply()
+    {
+        $this->tank = $this->_fval * $this->_sval;
+
+        return $this;
+    }
+
+    public function multiplyBy($float)
+    {
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->tank = $this->tank * $float;
+
+        return $this;
+    }
+
 
     /**
      * @throws Exception
      */
-    public function divideBy($float = null)
+
+    public function divide()
     {
-        if ($float == null) {
-            if ($this->_sval == 0) {
-                throw new \InvalidArgumentException();
-            } else {
-                $this->tank = $this->_fval / $this->_sval;
-            }
-        } else {
-            if (!is_int($float)) {
-                throw new \InvalidArgumentException();
-            }
-            if ($float == 0) {
-                throw new \InvalidArgumentException();
-            }
-            $this->tank = $this->tank / $float;
+        if ($this->_sval == 0) {
+            throw new \InvalidArgumentException();
+            echo 'fd';
         }
+        if (!is_int($this->_sval)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->tank = $this->_fval / $this->_sval;
+
+        return $this;
+    }
+
+    public function divideBy($float)
+    {
+        if (!is_int($float) || $float == 0) {
+            throw new \InvalidArgumentException();
+        }
+        $this->tank = $this->tank / $float;
 
         return $this;
     }
 }
 
-//$mycalc = new Task12(12, 0);
-//echo $mycalc->divideBy();
+/*
+$mycalc = new Task12(12, 2);
+echo $mycalc->add();
+*/
