@@ -15,8 +15,8 @@ class Task5
         $fib1 = '1';
         $fib2 = '1';
         while (mb_strlen($fib2) < $n) {
-            //$sum = bcadd($fib1, $fib2);
-            $sum = $fib1 + $fib2;
+            $sum = bcadd($fib1, $fib2);
+            // $sum = $fib1 + $fib2;
             $fib1 = $fib2;
             $fib2 = $sum;
         }
@@ -24,5 +24,6 @@ class Task5
         return $fib2;
     }
 }
+//121253296785054970112527561785150965989517860854334294232405034490770322947313730810358523404222464
+//echo Task5::main(100);
 
-//echo Task5::main(12);
