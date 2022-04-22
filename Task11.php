@@ -6,40 +6,53 @@ require_once 'Task11_1.php';
 
 class Task11
 {
-    private function __construct()
-    {
-    }
+    private static $inst = null;
+    public static $priv = 'alfa';
+
 
     private function __clone()
     {
     }
 
-    // один только объект
-    public static function Instance()
+    private function __construct()
     {
-        static $inst = null;
-        if ($inst === null) {
-            $inst = new Task11();
+    }
+
+    public static function getInstance()
+    {
+        if (self::$inst === null) {
+            self::$inst = new self();
         }
 
-        return $inst;
+        return self::$inst;
     }
 
 
     public static function who()
     {
-        echo 'class task11';
+        echo static::$priv;
     }
 
-    public static function test()
-    {
-        static::who(); // здесь работает позднее статическое связывание
-    }
+    /*   public static function test()
+        {
+            static::who(); // здесь работает позднее статическое связывание
+        }*/
 }
 
+$Object1 = Task11::getInstance();
+$Object2 = Task11::getInstance();
+$Object3 = Task11_1::getInstance();
+$Object4 = Task11_1::getInstance();
+
+$Object1->who();
+$Object2->who();
+$Object3->who();
+$Object4->who();
 
 
-//Task11_1::test();
-//$dd=new Task11();  // ошибка выдаст это хорошо
- //$obj=Task11::Instance(); // можно использовать
-//echo $obj;
+Task11::who();
+Task11_1::who();
+Task11_1::who();
+Task11_1::who();
+
+//$Object5 = new Task11_1();
