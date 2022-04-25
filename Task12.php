@@ -4,14 +4,20 @@ namespace src;
 
 class Task12
 {
-    private int $numberOne;
-    private int $numberTwo;
-    private string|int|float $result;
-
-    public function __construct(int $numberOne, int $numberTwo)
+    public int $number1;
+    public int $number2;
+    public $result;
+    public function __construct($fval, $sval)
     {
-        $this->numberOne = $numberOne;
-        $this->numberTwo = $numberTwo;
+        $this->number1 = $fval;
+        $this->number2 = $sval;
+        $this->result = '';
+        if (!is_int($this->number2)) {
+            throw new \InvalidArgumentException();
+        }
+        if (!is_int($this->number1)) {
+            throw new \InvalidArgumentException();
+        }
     }
 
     public function __toString()
@@ -19,51 +25,87 @@ class Task12
         return $this->result;
     }
 
-    public function add(): Task12
+    public function add()
     {
-        $this->result = $this->numberOne + $this->numberTwo;
+        $this->result = $this->number1 + $this->number2;
 
         return $this;
     }
 
-    public function minus(): Task12
+    public function addBy($float)
     {
-        $this->result = $this->numberOne - $this->numberTwo;
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->result * 1 + $float;
 
         return $this;
     }
 
-    public function multiply(): Task12
+    public function subtract()
     {
-        $this->result = $this->numberOne * $this->numberTwo;
+        $this->result = $this->number1 - $this->number2;
 
         return $this;
     }
 
-    public function divide(): Task12
+    public function subtractBy($float)
     {
-        $this->result = 0 === $this->numberTwo ? throw new \InvalidArgumentException() : $this->numberOne / $this->numberTwo;
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->result - $float;
 
         return $this;
     }
 
-    public function addBy(int $number): int|float
+
+    public function multiply()
     {
-        return $this->result + $number;
+        $this->result = $this->number1 * $this->number2;
+
+        return $this;
     }
 
-    public function minusBy(int $number): int|float
+    public function multiplyBy($float)
     {
-        return $this->result - $number;
+        if (!is_int($float)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->result * $float;
+
+        return $this;
     }
 
-    public function multiplyBy(int $number): int|float
+
+    /**
+     * @throws Exception
+     */
+
+    public function divide()
     {
-        return $this->result * $number;
+        if ($this->number2 == 0) {
+            throw new \InvalidArgumentException();
+        }
+        if (!is_int($this->number2)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->number1 / $this->number2;
+
+        return $this;
     }
 
-    public function divideBy(int $number): string|int|float
+    public function divideBy($float)
     {
-        return 0 === $number ? throw new \InvalidArgumentException() : $this->result / $number;
+        if (!is_int($float) || $float == 0) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->result / $float;
+
+        return $this;
     }
 }
+
+
+//$mycalc = new Task12(6, 12);
+//echo $mycalc->add();
