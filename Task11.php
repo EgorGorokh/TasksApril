@@ -2,7 +2,7 @@
 
 namespace src;
 
-require_once 'Task11_1.php';
+//require_once 'Task11_1.php';
 
 class Task11
 {
