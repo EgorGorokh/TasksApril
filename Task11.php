@@ -18,7 +18,7 @@ class Task11
     {
     }
 
-    public static function getInstance()
+    public static function main()
     {
         if (self::$inst === null) {
             self::$inst = new self();
