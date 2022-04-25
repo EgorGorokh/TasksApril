@@ -4,31 +4,31 @@ namespace src;
 
 class Task12
 {
-    public $tank;
-    public $_fval;
-    public $_sval;
+    public $result;
+    public int $number1;
+    public int $number2;
 
     public function __construct($fval, $sval)
     {
-        $this->_fval = $fval;
-        $this->_sval = $sval;
-        $this->tank = '';
-        if (!is_int($this->_sval)) {
+        $this->number1 = $fval;
+        $this->number2 = $sval;
+        $this->result = '';
+        if (!is_int($this->number2)) {
             throw new \InvalidArgumentException();
         }
-        if (!is_int($this->_fval)) {
+        if (!is_int($this->number1)) {
             throw new \InvalidArgumentException();
         }
     }
 
     public function __toString()
     {
-        return $this->tank;
+        return $this->result;
     }
 
     public function add()
     {
-        $this->tank = $this->_fval + $this->_sval;
+        $this->result = $this->number1 + $this->number2;
 
         return $this;
     }
@@ -38,14 +38,14 @@ class Task12
         if (!is_int($float)) {
             throw new \InvalidArgumentException();
         }
-        $this->tank = $this->tank * 1 + $float;
+        $this->result = $this->result * 1 + $float;
 
         return $this;
     }
 
     public function subtract()
     {
-        $this->tank = $this->_fval - $this->_sval;
+        $this->result = $this->number1 - $this->number2;
 
         return $this;
     }
@@ -55,7 +55,7 @@ class Task12
         if (!is_int($float)) {
             throw new \InvalidArgumentException();
         }
-        $this->tank = $this->tank * 1 - $float;
+        $this->result = $this->result * 1 - $float;
 
         return $this;
     }
@@ -63,7 +63,7 @@ class Task12
 
     public function multiply()
     {
-        $this->tank = $this->_fval * $this->_sval;
+        $this->result = $this->number1 * $this->number2;
 
         return $this;
     }
@@ -73,7 +73,7 @@ class Task12
         if (!is_int($float)) {
             throw new \InvalidArgumentException();
         }
-        $this->tank = $this->tank * $float;
+        $this->result = $this->result * $float;
 
         return $this;
     }
@@ -85,14 +85,13 @@ class Task12
 
     public function divide()
     {
-        if ($this->_sval == 0) {
-            throw new \InvalidArgumentException();
-            echo 'fd';
-        }
-        if (!is_int($this->_sval)) {
+        if ($this->number2 == 0) {
             throw new \InvalidArgumentException();
         }
-        $this->tank = $this->_fval / $this->_sval;
+        if (!is_int($this->number2)) {
+            throw new \InvalidArgumentException();
+        }
+        $this->result = $this->number1 / $this->number2;
 
         return $this;
     }
@@ -102,13 +101,13 @@ class Task12
         if (!is_int($float) || $float == 0) {
             throw new \InvalidArgumentException();
         }
-        $this->tank = $this->tank / $float;
+        $this->result = $this->result / $float;
 
         return $this;
     }
 }
 
-/*
-$mycalc = new Task12(12, 2);
-echo $mycalc->add();
-*/
+
+//$mycalc = new Task12(6, 12);
+//echo $mycalc->add();
+
