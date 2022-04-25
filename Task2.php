@@ -29,12 +29,10 @@ class Task2
             return 0;
         }
 
-        return abs(round($diff / 86400));
+        return abs(round($diff / 86400)) + 1;
     }
 }
 
 
-//echo Task2::main('2022-04-24');
+//echo Task2::main('2022-04-27');
 
-
-//echo Task2::main('2022-12-2');
