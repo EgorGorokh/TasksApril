@@ -110,4 +110,3 @@ class Task12
 
 //$mycalc = new Task12(6, 12);
 //echo $mycalc->add();
-
