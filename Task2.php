@@ -17,18 +17,12 @@ class Task2
             throw new \InvalidArgumentException();
         }
 
-
+        $target_days = mktime(0, 0, 0, $numbers[1], $numbers[2], $numbers[0]);
         $today = time();
-        $diff = strtotime($date) - $today;
+        $diff_days = ($target_days - $today);
+        $days = (int)($diff_days / 86400);
 
-        if ($diff < -86400) {
-            throw new \InvalidArgumentException();
-        }
-        if ($diff > -86400 && $diff < 0) {
-            return 0;
-        }
-
-        return abs(round($diff / 86400));
+        return $days;
     }
 }
-
+// echo Task2::main('2022-04-28');
