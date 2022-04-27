@@ -30,5 +30,5 @@ class Task2
 
         return abs(round($diff / 86400));
     }
-} 
+}
 
