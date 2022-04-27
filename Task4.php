@@ -9,11 +9,10 @@ class Task4
         if (!is_string($input)) {
             throw new Exception('incorrect input data');
         }
-        $dash = str_replace('-', ' ', $input);
-        $underline = str_replace('_', ' ', $dash);
-        $bigLetter = ucwords($underline);
+        $dash = str_replace(['-', '_', ':', ';', '*', '=', '+', '$'], ' ', $input);
+        $bigLetter = ucwords($dash);
 
         return str_replace(' ', '', $bigLetter);
     }
 }
-//Task4::main();
+//echo Task4::main('jdv__$$$ddd_fff----Gu***wv :::::;;;;;wihb');
