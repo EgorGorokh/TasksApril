@@ -19,7 +19,6 @@ class Task2
 
 
         $today = time();
-        // echo $today;
         $diff = strtotime($date) - $today;
 
         if ($diff < -86400) {
@@ -32,5 +31,4 @@ class Task2
         return abs(round($diff / 86400));
     }
 }
-//echo Task2::main('2022-05-01');
 
