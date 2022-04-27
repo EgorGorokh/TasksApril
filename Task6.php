@@ -39,15 +39,8 @@ class Task6
             new DateInterval('P1D'),
             new DateTime($lastYear . '-' . $lastMonth . '-30')
         );
-        /*
-                function dayofweek($d, $m, $y)//функция определяет является ли день понедельником 1-да, 0-нет
-                {
-                    static $t = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
-                    $y -= $m < 3;
 
-                    return ($y + $y / 4 - $y / 100 + $y / 400 + $t[$m - 1] + $d) % 7;
-                }
-        */
+
         $count = 0; // количество таких понедельников
         $arrayMondays[0] = $count;
         foreach ($period as $value) {
@@ -73,6 +66,4 @@ class Task6
         }
     }
 }
-
-//echo Task6::main(2021, 2021, 1, 12);
 
