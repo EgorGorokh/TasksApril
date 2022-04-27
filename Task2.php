@@ -19,13 +19,23 @@ class Task2
 
         $target_days = mktime(0, 0, 0, $numbers[1], $numbers[2], $numbers[0]);
         $today = time();
-        if ($target_days < $today) {
+        if ($target_days < $today && $today - $target_days > 86400) {
             throw new \InvalidArgumentException();
         }
+
+        $dateToday = date('m-d-Y ', time());
+        $arrToday = explode('-', $dateToday);
+        $days = 0;
+        if ($arrToday[1] == $numbers[2]) {
+            return 0;
+        }
+
+
         $diff_days = ($target_days - $today);
         $days = (int)($diff_days / 86400);
 
         return $days + 1;
     }
 }
-// echo Task2::main('2022-04-30');
+
+//echo Task2::main('2022-04-29');
