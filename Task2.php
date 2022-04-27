@@ -34,5 +34,5 @@ class Task2
 }
 
 
-//echo Task2::main('2022-04-30');
+//echo Task2::main('2022-05-01');
 
