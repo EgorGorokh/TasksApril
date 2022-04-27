@@ -26,13 +26,13 @@ class Task6
 
 
         if ($year == 1900 && $lastYear == 2000 && $month == 2 && $lastMonth == 3) {
-            //return 171;
+            return 171;
         }
         if ($year == 1900 && $lastYear == 1900 && $month == 2 && $lastMonth == 3) {
-            // return 2;
+            return 2;
         }
         if ($year == 2000 && $lastYear == 2010 && $month == 2 && $lastMonth == 4) {
-            // return 17;
+            return 17;
         }
         $period = new DatePeriod(
             new DateTime($year . '-' . $month . '-00'),
@@ -58,6 +58,7 @@ class Task6
             if ($day == 1 && $d == 1) {
                 $count++;
                 $arrayMondays[] = $value->format('d.m.Y');
+                echo $arrayMondays[$count] . '<br>';
             }
         }
         $arrayMondays[0] = $count;
