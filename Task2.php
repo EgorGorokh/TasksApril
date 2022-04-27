@@ -32,7 +32,5 @@ class Task2
         return abs(round($diff / 86400));
     }
 }
-
-
 //echo Task2::main('2022-05-01');
 
