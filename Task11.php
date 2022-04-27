@@ -7,7 +7,7 @@ namespace src;
 class Task11
 {
     private static $inst = null;
-    public static $priv = 'alfa';
+    //  public static $priv = 'alfa';
 
 
     private function __clone()
@@ -27,18 +27,18 @@ class Task11
         return self::$inst;
     }
 
-
-    public static function who()
-    {
-        echo static::$priv;
-    }
+    /*
+        public static function who()
+        {
+            echo static::$priv;
+        }*/
 
     /*   public static function test()
         {
             static::who(); // здесь работает позднее статическое связывание
         }*/
 }
-
+/*
 $Object1 = Task11::getInstance();
 $Object2 = Task11::getInstance();
 $Object3 = Task11_1::getInstance();
@@ -54,5 +54,5 @@ Task11::who();
 Task11_1::who();
 Task11_1::who();
 Task11_1::who();
-
+*/
 //$Object5 = new Task11_1();
