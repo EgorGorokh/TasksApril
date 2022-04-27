@@ -37,22 +37,3 @@ class Task11
         {
             static::who(); // здесь работает позднее статическое связывание
         }*/
-}
-/*
-$Object1 = Task11::getInstance();
-$Object2 = Task11::getInstance();
-$Object3 = Task11_1::getInstance();
-$Object4 = Task11_1::getInstance();
-
-$Object1->who();
-$Object2->who();
-$Object3->who();
-$Object4->who();
-
-
-Task11::who();
-Task11_1::who();
-Task11_1::who();
-Task11_1::who();
-*/
-//$Object5 = new Task11_1();
