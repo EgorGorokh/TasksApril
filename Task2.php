@@ -37,5 +37,3 @@ class Task2
         return $days + 1;
     }
 }
-
-//echo Task2::main('2022-04-29');
