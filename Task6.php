@@ -57,4 +57,4 @@ class Task6
         }
     }
 }
-
+//echo Task6::main(1980,2021,05,10);
