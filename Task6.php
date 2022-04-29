@@ -5,23 +5,22 @@ namespace src;
 use DateInterval;
 use DatePeriod;
 use DateTime;
-use Exception;
 
 class Task6
 {
     public static function main(int $year, int $lastYear, int $month, int $lastMonth, $day = 'Monday')
     {
         if (!is_int($year) || $year < 0) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($lastYear) || $lastYear < $year) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($month) || $month < 1 || $month > 12) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
         if (!is_int($lastMonth) || $lastMonth < 1 || $lastMonth > 12) {
-            throw new Exception('incorrect input data');
+            throw new \InvalidArgumentException();
         }
 
 
@@ -57,4 +56,4 @@ class Task6
         }
     }
 }
-//echo Task6::main(1980,2021,05,10);
+echo Task6::main(-1900, 2021, 05, 10);
