@@ -25,15 +25,7 @@ class Task6
         }
 
 
-        if ($year == 1900 && $lastYear == 2000 && $month == 2 && $lastMonth == 3) {
-            return 171;
-        }
-        if ($year == 1900 && $lastYear == 1900 && $month == 2 && $lastMonth == 3) {
-            return 2;
-        }
-        if ($year == 2000 && $lastYear == 2010 && $month == 2 && $lastMonth == 4) {
-            return 17;
-        }
+
         $period = new DatePeriod(
             new DateTime($year . '-' . $month . '-00'),
             new DateInterval('P1D'),
@@ -47,7 +39,6 @@ class Task6
             $y = $value->format('Y');
             $m = $value->format('m');
             $d = $value->format('d');
-            //$day = dayofweek($d, $m, $y);
             static $t = [0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4];
             $y -= $m < 3;
             $day = ($y + $y / 4 - $y / 100 + $y / 400 + $t[$m - 1] + $d) % 7;
@@ -66,5 +57,4 @@ class Task6
         }
     }
 }
-
 
