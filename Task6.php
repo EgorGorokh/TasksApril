@@ -44,7 +44,7 @@ class Task6
             if ($day == 1 && $d == 1) {
                 $count++;
                 $arrayMondays[] = $value->format('d.m.Y');
-                echo $arrayMondays[$count] . '<br>';
+                //echo $arrayMondays[$count] . '<br>';
             }
         }
         $arrayMondays[0] = $count;
@@ -56,4 +56,4 @@ class Task6
         }
     }
 }
-echo Task6::main(-1900, 2021, 05, 10);
+//echo Task6::main(1900, 2021, 05, 10);
