@@ -2,7 +2,6 @@
 
 require_once 'Main.php';
 
-
 class Products extends Main
 {
     private $name;

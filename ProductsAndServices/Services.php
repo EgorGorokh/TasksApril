@@ -1,5 +1,7 @@
 <?php
 
+require_once 'Main.php';
+
 class Services extends Main
 {
     private $deadline;

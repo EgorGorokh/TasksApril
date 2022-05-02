@@ -2,17 +2,17 @@
 
 require_once 'Main.php';
 
-require_once 'Products.php';
-require_once 'Laptops.php';
-require_once 'TV.php';
-require_once 'Mobilephone.php';
-require_once 'Refrigerators.php';
+require_once 'ProductsAndServices/Products.php';
+require_once 'ProductsAndServices/Products/Laptops.php';
+require_once 'ProductsAndServices/Products/TV.php';
+require_once 'ProductsAndServices/Products/Mobilephone.php';
+require_once 'ProductsAndServices/Products/Refrigerators.php';
 
-require_once 'Services.php';
-require_once 'Warranty_Service.php';
-require_once 'Delivery_Service.php';
-require_once 'Installation.php';
-require_once 'Configuration_Service.php';
+require_once 'ProductsAndServices/Services.php';
+require_once 'ProductsAndServices/Services/Warranty_Service.php';
+require_once 'ProductsAndServices/Services/Delivery_Service.php';
+require_once 'ProductsAndServices/Services/Installation.php';
+require_once 'ProductsAndServices/Services/Configuration_Service.php';
 
 /* Можно создавать объекты (обычный конструктор)
  *
@@ -43,7 +43,7 @@ Main::setBusket($w2);
 Main::setBusket($w3);
 
 // Подсчитываем стоимость покупки
-//Main::basketReceipt();
+Main::basketReceipt();
 
 // Ознакомиться с каталогом
 //Main::katalog();
