@@ -25,10 +25,25 @@ function meta()
         }
     } else {
         if (move_uploaded_file($_FILES['filename']['tmp_name'], 'files/' . $_FILES['filename']['name'])) {
-            echo 'Файл загружен!<br>';
-            echo 'Размер файла:' . $_FILES['filename']['size'] / (1024) . 'mb<br>';
-            echo 'Имя файла:' . $_FILES['filename']['name'] . '<br>';
-            echo 'Мето:' . $_FILES['filename']['type'] . '<br>';
+            //echo 'Файл загружен!<br>';
+            // echo 'Размер файла:' . $_FILES['filename']['size'] / (1024) . 'mb<br>';
+            // echo 'Имя файла:' . $_FILES['filename']['name'] . '<br>';
+            //  echo 'Мето:' . $_FILES['filename']['type'] . '<br>';
+            $w1 = $_FILES['filename']['type'];
+            $w2 = $_FILES['filename']['size'];
+            $w3 = $_FILES['filename']['name'];
+
+            echo <<<EOT
+           <br>
+            Файл загружен! 
+            <br>
+            Размер файла:"$w1"
+            <br>
+            Имя файла:"$w2"
+            <br>
+             Мето:"$w3"
+           EOT;
+
         }
     }
 }
