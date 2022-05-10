@@ -15,6 +15,7 @@ $user = $result->fetch_assoc();
 
 if (count($user) == 0) {
     setcookie('auto', 'Такой пользователь не найден ');
+    setcookie('email', $email);
     $mysql->close();
     header('Location: authorization.php');
 } else {
@@ -22,4 +23,3 @@ if (count($user) == 0) {
     $mysql->close();
     header('Location: ../index.php');
 }
-?>

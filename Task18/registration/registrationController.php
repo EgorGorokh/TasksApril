@@ -47,6 +47,9 @@ if (mysqli_query($mysql)) {
 } else {
     if (count(Checks::$errorArr) > 0) {
         setcookie('registr', Checks::$errorArr[0]);
+        setcookie('name',$name);
+        setcookie('surname',$surname);
+        setcookie('email',$email);
         $mysql->close();
         header('Location: registration.php');
     } else {

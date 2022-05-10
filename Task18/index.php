@@ -19,7 +19,9 @@
     } else {
         echo ' <li><a href="exit.php">Выйти</a></li>
               <li><a href="sending/sending.php">Отправить файлы</a></li>';
-    } ?>
+    }
+
+  ?>
 
 
 </div>
@@ -32,13 +34,14 @@
     Тут будет какая то инфа и тому подобное
 </div>
 <div>
-    <?php
+    <?php/*
     if (isset($_COOKIE['user1'])) {
         echo $_COOKIE['user1'] . " Вы в системе!";
     } else {
         echo "нету куки!";
     }
-    ?>
+*/
+?>
 </div>
 </body>
 </html>

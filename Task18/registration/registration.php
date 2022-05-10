@@ -15,7 +15,12 @@
     <div class="row">
         <div class="col">
             <h1>Форма регистрации</h1>
-            <form action="registrationController.php" method="post" >
+
+
+            <form action="registrationController.php" method="post">
+                <?php
+                if (!isset($_COOKIE['registr'])) {
+                    echo '
                 <input type="text" class="form-control" name="name" id="name" placeholder="Имя" required="required"> <label for="name">имя</label> <br><br>
                 <input type="text" class="form-control" name="surname" id="surname" placeholder="Фамилия" required="required"> <label for="surname">фамилия</label><br><br>
                 <input type="email" class="form-control" name="email" id="email" placeholder="email" required="required"><label for="email">email</label> <br><br>
@@ -23,17 +28,34 @@
                 <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль" required="required"> <label for="pass">пароль</label><br><br>
                 <input type="password" class="form-control" name="confirmation_pass" id="confirmation_pass" placeholder="Подтвердите пароль" required="required"> <label for="confirmation_pass">подтвердить пароль</label><br><br>
                 <button type="submit"  name="submit" onclick="erasingEmail()">Зарегестрироваться</button>
+                
+                ';
+                } else {
+                    $name= $_COOKIE['name'];
+                    $surname= $_COOKIE['surname'];
+                    $email= $_COOKIE['email'];
+                    echo '
+                <input type="text" class="form-control" name="name" id="name" placeholder="Имя" required="required" value='.$name.'> <label for="name">имя</label> <br><br>
+                <input type="text" class="form-control" name="surname" id="surname" placeholder="Фамилия" required="required" value='.$surname.'> <label for="surname">фамилия</label><br><br>
+                <input type="email" class="form-control" name="email" id="email" placeholder="email" required="required" value='.$email.'><label for="email" >email</label> <br><br>
+                <input type="email" class="form-control" name="confirmation_email" id="confirmation_email" placeholder="Подтвердите email" required="required" value='.$email.'><label for="confirmation_email">подтвердить email</label><br><br>
+                <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль" required="required"> <label for="pass">пароль</label><br><br>
+                <input type="password" class="form-control" name="confirmation_pass" id="confirmation_pass" placeholder="Подтвердите пароль" required="required"> <label for="confirmation_pass">подтвердить пароль</label><br><br>
+                <button type="submit"  name="submit" onclick="erasingEmail()">Зарегестрироваться</button> ';
+                } ?>
+
             </form>
+
+
         </div>
     </div>
 </div>
-<div >
+<div>
     <?php
-    if (isset($_COOKIE['registr']))
-    {
+    if (isset($_COOKIE['registr'])) {
         echo $_COOKIE['registr'];
     }
-    setcookie('registr','',time()-3600);
+    setcookie('registr', '', time() - 3600);
     ?>
 </div>
 <script src="../js/registration.js"></script>

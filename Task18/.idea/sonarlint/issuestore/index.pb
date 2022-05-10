@@ -1,3 +1,7 @@
 
+C
+js/authorization.js,5/8/5865a7738c8fc58e593e1d5680d2a3e67513ffac
+B
+js/registration.js,d/5/d52f322b9385ca86dc3e17b8a6dc2ed3b83ec6cd
 =
-css/style.css,1/2/126b0f8c1ec95fb3a2541745bfc21365b438d668
+js/sending.js,0/4/04ec0f0a62b578e755c291cf968b562bef020d97
