@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+RewriteBase /
+
+RewriteRule ^registration$ registration.php
+RewriteRule ^index$ index.php
+RewriteRule ^sending$ sending.php
+RewriteRule ^authorization$ authorization.php
+
+</IfModule>
