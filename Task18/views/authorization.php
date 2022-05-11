@@ -11,7 +11,7 @@
 <?php
 if (!isset($_COOKIE['auto'])) {
     echo '
-<form action="autorizationController.php" method="POST" enctype="multipart/form-data">
+<form action="../controllers/autorizationController.php" method="POST" enctype="multipart/form-data">
     <input type="email" class="form-control" name="email" id="email" placeholder="Введите email"
            required="required"><br>
     <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль"
@@ -21,7 +21,7 @@ if (!isset($_COOKIE['auto'])) {
 ';
 } else {
     $email = $_COOKIE['email'];
-    echo '<form action="autorizationController.php" method="POST" enctype="multipart/form-data">
+    echo '<form action="../controllers/autorizationController.php" method="POST" enctype="multipart/form-data">
     <input type="email" class="form-control" name="email" id="email" placeholder="Введите email"
            required="required" value=' . $email . '><br>
     <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите пароль"

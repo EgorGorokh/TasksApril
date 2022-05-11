@@ -17,7 +17,7 @@
             <h1>Форма регистрации</h1>
 
 
-            <form action="registrationController.php" method="post">
+            <form action="../controllers/registrationController.php" method="post">
                 <?php
                 if (!isset($_COOKIE['registr'])) {
                     echo '
@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-<div>
+<div >
     <?php
     if (isset($_COOKIE['registr'])) {
         echo $_COOKIE['registr'];

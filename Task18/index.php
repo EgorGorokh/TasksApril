@@ -13,12 +13,12 @@
 <div class="menu">
     <?php
     if (!isset($_COOKIE['user1'])) {
-        echo '<li><a href="registration/registration.php">Зарегестрироваться</a></li>
-             <li><a href="authorization/authorization.php">Авторизоваться</a></li>
-            <li><a href="sending/sending.php">Отправить файлы</a></li>';
+        echo '<li><a href="views/registration.php">Зарегестрироваться</a></li>
+             <li><a href="views/authorization.php">Авторизоваться</a></li>
+            <li><a href="views/sending.php">Отправить файлы</a></li>';
     } else {
         echo ' <li><a href="exit.php">Выйти</a></li>
-              <li><a href="sending/sending.php">Отправить файлы</a></li>';
+              <li><a href="views/sending.php">Отправить файлы</a></li>';
     }
 
   ?>

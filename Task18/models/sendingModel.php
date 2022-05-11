@@ -1,6 +1,6 @@
 <?php
 
-class Model
+class sendingModel
 {
     public static $log;
     public static $errorArray = [];
@@ -14,46 +14,46 @@ class Model
 
 
     static public function setFormat(){
-        Model::$format=end(Model::$array);
+        sendingModel::$format=end(sendingModel::$array);
     }
 
     static public function setArray()
     {
-        Model::$array = explode('.', $_FILES['filename']['name']);
+        sendingModel::$array = explode('.', $_FILES['filename']['name']);
     }
     static public function setdd()
     {
-        Model::$dd='/logs/upload_' . date('Ymd') . '.log';
+        sendingModel::$dd='/logs/upload_' . date('Ymd') . '.log';
     }
     static public function setlog()
     {
-        Model::$log=@date('Y-m-d H:i:s') . "\t" . $_FILES['filename']['name'] . "\t" . $_FILES['filename']['size'] . "\t";
+        sendingModel::$log=@date('Y-m-d H:i:s') . "\t" . $_FILES['filename']['name'] . "\t" . $_FILES['filename']['size'] . "\t";
     }
 
 
 
     static function morecordFiles()
     {
-        file_put_contents(__DIR__ . Model::$dd, Model::$log . PHP_EOL, FILE_APPEND);
+        file_put_contents(__DIR__ . sendingModel::$dd, sendingModel::$log . PHP_EOL, FILE_APPEND);
     }
 
     static function meta()
     {
-        if (count(Model::$errorArray) > 0) {
-            setcookie('name', 'файл не был загружен! '.Model::$errorArray[0]);
+        if (count(sendingModel::$errorArray) > 0) {
+            setcookie('name', 'файл не был загружен! '.sendingModel::$errorArray[0]);
         } else {
             if (move_uploaded_file($_FILES['filename']['tmp_name'], 'files/' . $_FILES['filename']['name'])) {
                 $w1 = $_FILES['filename']['type'];
                 $w2 = $_FILES['filename']['size'];
                 $w3 = $_FILES['filename']['name'];
-                setcookie('name', 'Файл загружен!' . '<br>' . 'Размер файла:' . $w2 . '<br>' . 'Имя файла:' . $w3 . '<br>' . 'Мето:' . $w1);
+                setcookie('name', 'Файл загружен!' . '<br>' . 'Размер файла:' . $w2 . '<br>' . 'Имя файла:' . $w3 . '<br>' . 'Мето:' . $w1,time()+300,"/");
             }
         }
     }
 
     static function fileIn600()
     {
-        if (Model::$format == 'jpeg') {
+        if (sendingModel::$format == 'jpeg') {
             $filename = 'files/' . $_FILES['filename']['name'];
             list($width, $height) = getimagesize($filename);
             $newWidth = 600;
@@ -71,7 +71,7 @@ class Model
 
     static function coatingWatermark()
     {
-        if (Model::$format == 'jpeg') {
+        if (sendingModel::$format == 'jpeg') {
             $filename = 'files/' . $_FILES['filename']['name'];
             $im = imagecreatefromjpeg($filename);
             $stamp = imagecreatetruecolor(100, 70);
@@ -96,7 +96,7 @@ class Model
 
     static function fileIn50()
     {
-        if (Model::$format == 'jpeg') {
+        if (sendingModel::$format == 'jpeg') {
             $filename = 'files/' . $_FILES['filename']['name'];
             list($width, $height) = getimagesize($filename);
             if ($width > $height) {

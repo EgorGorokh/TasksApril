@@ -19,7 +19,7 @@ if (!isset($_COOKIE['user1'])) {
 <body>
 <h1>Форма отправки данных</h1>
 
-<form action="Controller.php" method="POST" enctype="multipart/form-data">
+<form action="../controllers/sendingController.php" method="POST" enctype="multipart/form-data">
     <div class="center">
         <em>файлы не более 2 мегабайт!</em>
     </div>
