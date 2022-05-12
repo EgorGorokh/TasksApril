@@ -43,6 +43,7 @@ class Model
             setcookie('name', 'файл не был загружен!', time() + 3600);
             for ($i = 0; $i < count(Model::$errorArray); $i++) {
                 echo Model::$errorArray[$i] . '<br>';
+                setcookie('name',Model::$errorArray[0]);
             }
         } else {
             if (move_uploaded_file($_FILES['filename']['tmp_name'], 'files/' . $_FILES['filename']['name'])) {

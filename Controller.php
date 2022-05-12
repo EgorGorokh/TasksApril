@@ -7,16 +7,15 @@ class Controller
     static function checks()
     {
         if (!in_array(Model::$format, Model::$validFormat)) {
-             throw new Exception('Формат файла не допустимый!');
-             Model::$errorArray='ошибкааа';
+            Model::$errorArray[] = 'Формат файла не допустимый!';
         }
 
         if ($_FILES['filename']['size'] > 2 * 1024 * 1024) {
-            throw new Exception('Размер файла превышает 2 мегабайта!');
+            Model::$errorArray[] = 'Размер файла превышает 2 мегабайта!';
         }
 
         if (is_executable($_FILES['filename']['tmp_name'])) {
-            throw new Exception('Файл является исполняемым!');
+            Model::$errorArray[] = 'Файл является исполняемым!';
         }
     }
 
@@ -30,7 +29,7 @@ class Controller
     static function checkPlace()
     {
         if ((disk_free_space('files/')) < $_FILES['filename']['size']) {
-            throw new Exception('Недостаточно места для сохранения!');
+            Model::$errorArray[] = 'Недостаточно места для сохранения!';
         }
     }
 
