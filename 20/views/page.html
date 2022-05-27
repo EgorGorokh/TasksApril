@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="form.php" method="POST" >
+    <div class="center">
+        <input type="text" name="name"><br>
+        <input type="email"  name="email"><br>
+        <select name="gender">
+            <option>male</option>
+            <option>female</option>
+        </select>
+        <select name="position">
+            <option>inactive</option>
+            <option>active</option>
+        </select>
+        <input type="submit" id="submit" name="upload" value="Add user"><br>
+    </div>
+</form>
+
+<table>
+    {% for key, field in books %}
+        <tr><td>  {{field['name']}} </td><td>{{field['email']}}</td><td>{{field['gender']}}</td><td>{{field['status']}}</td><td>
+        <form method="POST"><input type="submit" name="submitData{{field['id']}}" value="Delete"></form></td></tr>
+    {{delete(field['id'])}}
+    {% endfor %}
+</table>
