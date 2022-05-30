@@ -1,0 +1,15 @@
+.center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#submit{
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+}
+
+table{
+    align-self: center;
+    margin: 0 auto;
+}
