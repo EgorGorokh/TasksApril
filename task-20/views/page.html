@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="form.php" method="POST" >
+<form action="controller.php" method="POST">
     <div class="center">
         <input type="text" name="name"><br>
-        <input type="email"  name="email"><br>
+        <input type="email" name="email"><br>
         <select name="gender">
             <option>male</option>
             <option>female</option>
@@ -27,8 +27,18 @@
 
 <table>
     {% for key, field in books %}
-        <tr><td>  {{field['name']}} </td><td>{{field['email']}}</td><td>{{field['gender']}}</td><td>{{field['status']}}</td><td>
-        <form method="POST"><input type="submit" name="submitData{{field['id']}}" value="Delete"></form></td></tr>
-    {{delete(field['id'])}}
+    <tr>
+        <td>{{field['name']}}</td>
+        <td>{{field['email']}}</td>
+        <td>{{field['gender']}}</td>
+        <td>{{field['status']}}</td>
+        <td>{{field['id']}}
+        <td>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="id" value="{{field['id']}}">
+                <input type="submit" name="delete" value="Delete"></form>
+        </td>
+    </tr>
+
     {% endfor %}
 </table>
