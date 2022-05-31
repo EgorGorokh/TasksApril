@@ -2,10 +2,8 @@
 
 require_once 'controller.php';
 
- //$object = new Controller();
-//$object->main();
-//include "controller.php";
+$object = new Controller();
+$object->main();
 
-Controller::main();
 
 
