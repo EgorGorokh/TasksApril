@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5e8ebb2-1049-445d-b7da-2969333046ce" name="Changes" comment="task-20">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-20/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-20/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/Api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-20/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-20/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +81,7 @@
       <workItem from="1653898573834" duration="5000" />
       <workItem from="1653909130426" duration="1190000" />
       <workItem from="1653910507362" duration="12680000" />
-      <workItem from="1653933415902" duration="8507000" />
+      <workItem from="1653933415902" duration="8876000" />
     </task>
     <task id="LOCAL-00001" summary="20">
       <created>1653673519246</created>
