@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5e8ebb2-1049-445d-b7da-2969333046ce" name="Changes" comment="task-20">
+      <change beforePath="$PROJECT_DIR$/Task5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-20/views/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/task-20/views/page.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/task-20/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="29kxYW8tDisRVchII7SO29BYaW7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/egorgoroh/PhpstormProjects/TasksApril&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5e8ebb2-1049-445d-b7da-2969333046ce" name="Changes" comment="" />
+      <created>1653670933351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653670933351</updated>
+      <workItem from="1653670934886" duration="712000" />
+      <workItem from="1653672392461" duration="67000" />
+      <workItem from="1653672474466" duration="2075000" />
+      <workItem from="1653674556573" duration="1076000" />
+      <workItem from="1653830995962" duration="15000" />
+      <workItem from="1653831092791" duration="3000" />
+      <workItem from="1653832730424" duration="117000" />
+      <workItem from="1653840103645" duration="9000" />
+      <workItem from="1653898573834" duration="5000" />
+      <workItem from="1653909130426" duration="1190000" />
+      <workItem from="1653910507362" duration="12680000" />
+      <workItem from="1653933415902" duration="4363000" />
+    </task>
+    <task id="LOCAL-00001" summary="20">
+      <created>1653673519246</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653673519246</updated>
+    </task>
+    <task id="LOCAL-00002" summary="task-20">
+      <created>1653674034303</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653674034303</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/task-9" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20" />
+    <MESSAGE value="task-20" />
+    <option name="LAST_COMMIT_MESSAGE" value="task-20" />
+  </component>
+</project>

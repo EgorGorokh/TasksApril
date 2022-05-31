@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form action="form.php" method="POST" >
+<form action="controller.php" method="POST" >
     <div class="center">
         <input type="text" name="name"><br>
         <input type="email"  name="email"><br>
@@ -27,7 +27,7 @@
 
 <table>
     {% for key, field in books %}
-        <tr><td>  {{field['name']}} </td><td>{{field['email']}}</td><td>{{field['gender']}}</td><td>{{field['status']}}</td><td>
+        <tr><td>  {{field['name']}} </td><td>{{field['email']}}</td><td>{{field['gender']}}</td><td>{{field['status']}}</td><td>{{field['id']}}<td>
         <form method="POST"><input type="submit" name="submitData{{field['id']}}" value="Delete"></form></td></tr>
     {{delete(field['id'])}}
     {% endfor %}
