@@ -4,7 +4,6 @@ require_once 'Model.php';
 require_once '../vendor/autoload.php';
 require_once 'index.php';
 
-
 class Controller
 {
     public function main()
