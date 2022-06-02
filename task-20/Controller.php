@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Model.php';
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 class Controller
 {
