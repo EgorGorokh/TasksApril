@@ -60,6 +60,4 @@ class Model
         header("Location:index.php");
         exit();
     }
-
-
 }
