@@ -6,9 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rest API</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+
 <form action="index.php" method="POST">
     <div class="center">
         <input type="text" name="name"><br>
@@ -24,13 +26,14 @@
         <input type="submit" id="submit" name="addUser" value="Add user"><br>
     </div>
 </form>
+<br><br><br>
 <table>
     {% for key, field in books %}
     <tr>
         <td>{{field['name']}}</td>
         <td>{{field['email']}}</td>
         <td>{{field['gender']}}</td>
-        <td>{{field['status']}}</td>
+        <td>{{field['position']}}</td>
         <td>{{field['id']}}
         <td>
             <form action="index.php" method="POST">
@@ -38,6 +41,37 @@
                 <input type="submit" name="delete" value="Delete">
             </form>
         </td>
+        <td>
+            <form action="index.php" method="POST">
+                <input type="hidden" name="id" value="{{field['id']}}">
+                <input type="submit" name="edit" value="Edit">
+            </form>
+        </td>
+
+
+        {% if( field['id']==id) %}
+    </tr>
+    <tr>
+        <form action="index.php" method="POST">
+            <td><input type="text" name="name" value="{{field['name']}}"></td>
+            <td><input type="email" name="email" value="{{field['email']}}"></td>
+            <td><select name="gender">
+                <option>male</option>
+                <option>female</option>
+            </select></td>
+            <td><select name="position">
+                <option>inactive</option>
+                <option>active</option>
+            </select></td>
+            <td><input type="hidden" name="id" value="{{field['id']}}"></td>
+            <td></td>
+            <td><input type="submit" name="edit1" value="Edit">
+        </form>
+        </td>
+    </tr>
+    {% endif %}
     </tr>
     {% endfor %}
 </table>
+</body>
+</html>
