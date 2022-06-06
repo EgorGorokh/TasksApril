@@ -20,7 +20,6 @@ class Controller
             );
         }
     }
-
     public function main()
     {
         $model = new Model();
