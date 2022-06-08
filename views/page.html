@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+</head>
+<body>
+
+<div class="flex flex-col p-4">
+    <div x-data="{ open: true }">
+        <div @click="open = !open" class="flex items-center justify-between bg-gray-200 border p-4">
+            <p>Дашборд</p>
+            <span :class="open ? &#39fa-chevron-down&#39 : &#39fa-chevron-up&#39" class="fas"></span>
+        </div>
+        <div x-show.transition.in.duration.800ms="open" class="border p-4">
+            <table border="2">
+                <tr>
+                    <td>Средний чек за все время</td>
+                    <td>{{ averageCheckAllTime }}</td>
+                </tr>
+                <tr>
+                    <td>Средний чек за все сегодня</td>
+                    <td>{{ averageCheckToday }}</td>
+                </tr>
+                <tr>
+                    <td>Датa</td>
+                    <td>Количество проданных автомобилей</td>
+                </tr>
+
+                {% for key, field in arr1 %}
+                <tr>
+                    <td>{{field['dateOfSale']}}</td>
+                    <td>{{field['coun']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    <div x-data="{ open: false }">
+        <div @click="open = !open" class="flex items-center justify-between bg-gray-200 border p-4">
+            <p>По возрастанию модели и упадку цены</p>
+            <span :class="open ? &#39fa-chevron-down&#39 : &#39fa-chevron-up&#39" class="fas"></span>
+        </div>
+        <div x-show.transition.in.duration.800ms="open" class="border p-4">
+            <table border="2">
+                <tr>
+                    <td>Модель автомобиля</td>
+                    <td>Год выпуска</td>
+                    <td>Цвет</td>
+                    <td>Цена</td>
+                    </td></tr>
+                {% for key, field in arr2 %}
+                <tr>
+                    <td>{{field['model']}}</td>
+                    <td>{{field['releaseDate']}}</td>
+                    <td>{{field['color']}}</td>
+                    <td>{{field['price']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div x-data="{ open: false }">
+        <div @click="open = !open" class="flex items-center justify-between bg-gray-200 border p-4">
+            <p>Cписок всех</p>
+            <span :class="open ? &#39fa-chevron-down&#39 : &#39fa-chevron-up&#39" class="fas"></span>
+        </div>
+        <div x-show.transition.in.duration.800ms="open" class="border p-4">
+            <ul>
+                {% for key, field in arr3 %}
+                <li>{{field['model']}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+</body>
+</html>
