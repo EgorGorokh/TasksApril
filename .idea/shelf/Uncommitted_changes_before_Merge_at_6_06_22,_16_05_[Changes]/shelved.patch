@@ -1,0 +1,11 @@
+Index: .gitignore
+===================================================================
+diff --git a/.gitignore b/.gitignore
+deleted file mode 100644
+--- a/.gitignore	(revision 8b28961be08ddad34952fd0edc55cbd9f2815a5c)
++++ /dev/null	(revision 8b28961be08ddad34952fd0edc55cbd9f2815a5c)
+@@ -1,4 +0,0 @@
+-/vendor
+-/.idea
+-*composer.json
+-*composer.json.save
