@@ -1,0 +1,13 @@
+Index: task-20/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>../vendor\n../.idea
+===================================================================
+diff --git a/task-20/.gitignore b/task-20/.gitignore
+--- a/task-20/.gitignore	
++++ b/task-20/.gitignore	
+@@ -1,2 +1,2 @@
+ ../vendor
+-../.idea
+\ No newline at end of file
++../.idea
