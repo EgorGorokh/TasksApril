@@ -29,7 +29,7 @@ class Controller
         if (isset($_POST['delete'])) {
             $model->deleteUser($_POST['id']);
         }
-        if (isset($_POST['edit1'])) {
+        if (isset($_POST['editNow'])) {
             $model->editUser($_POST['id']);
         }
         $this->output($model->users);

@@ -33,7 +33,7 @@ CREATE TABLE `users` (
   `gender` varchar(32) NOT NULL,
   `position` varchar(32) NOT NULL,
   `id` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `users`

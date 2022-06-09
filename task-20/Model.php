@@ -1,23 +1,25 @@
 <?php
 
-require_once 'index.php';
-
 class Model
 {
     public $users;
+    public $name;
+    public $email;
+    public $gender;
+    public $position;
 
-    public function __construct()
+    public function __construct($name,$email,$gender,$position)
     {
         $this->users = DataBase::$mysql->query("SELECT * FROM `users`");
+        $this->name=$name;
+        $this->email=$email;
+        $this->gender=$gender;
+        $this->position=$position;
     }
 
     public function addUser()
     {
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $gender = $_POST["gender"];
-        $position = $_POST["position"];
-        DataBase::$mysql->query("INSERT INTO `users`(`name`, `email`, `gender`, `position`) VALUES ('$name','$email','$gender','$position')");
+        DataBase::$mysql->query("INSERT INTO `users`(`name`, `email`, `gender`, `position`) VALUES ('$this->name','$this->email','$this->gender','$this->position')");
         header("Location:index.php");
         exit();
     }
@@ -31,11 +33,7 @@ class Model
 
     public function editUser(string $id)
     {
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $gender = $_POST["gender"];
-        $position = $_POST["position"];
-        DataBase::$mysql->query("UPDATE `users` SET `name`='$name',`email`='$email',`gender`='$gender',`position`='$position' WHERE id=$id");
+        DataBase::$mysql->query("UPDATE `users` SET `name`='$this->name',`email`='$this->email',`gender`='$this->gender',`position`='$this->position' WHERE id=$id");
         header("Location:index.php");
         exit();
     }
