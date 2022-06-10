@@ -19,7 +19,7 @@
             <span :class="open ? &#39fa-chevron-down&#39 : &#39fa-chevron-up&#39" class="fas"></span>
         </div>
         <div x-show.transition.in.duration.800ms="open" class="border p-4">
-            <table border="2">
+            <table border="2" class="table_border">
                 <tr>
                     <td>Средний чек за все время</td>
                     <td>{{ averageCheckAllTime }}</td>
@@ -81,7 +81,6 @@
         </div>
     </div>
 </div>
-<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
-table{
-    border:2px solid black;
+.table_border {
+    border: 2px solid black;
 }
-tr{
-    border:2px solid black;
+
+.table_border tr {
+    border: 2px solid black;
 }
-td{
-    border:2px solid black;
+
+.table_border td {
+    border: 2px solid black;
 }
