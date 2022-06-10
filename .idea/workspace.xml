@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5e8ebb2-1049-445d-b7da-2969333046ce" name="Changes" comment="task-20" />
+    <list default="true" id="b5e8ebb2-1049-445d-b7da-2969333046ce" name="Changes" comment="task-20">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/3957b91a0d8450cea0115cfd5af69eac90d75897" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/page.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task-25" />
+        <entry key="$PROJECT_DIR$" value="task31" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

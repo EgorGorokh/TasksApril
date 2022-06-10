@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Model.php';
-require_once '../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 class Controller
 {
@@ -20,17 +20,21 @@ class Controller
             );
         }
     }
+
     public function main()
     {
         $model = new Model();
-        if (isset($_POST['addUser'])) {
-            $model->addUser();
-        }
-        if (isset($_POST['delete'])) {
-            $model->deleteUser($_POST['id']);
-        }
-        if (isset($_POST['editNow'])) {
-            $model->editUser($_POST['id']);
+        if (isset($_POST['name'])) {
+            $model->construct_Parametrs($_POST['name'], $_POST['email'], $_POST['gender'], $_POST['position']);
+            if (isset($_POST['addUser'])) {
+                $model->addUser();
+            }
+            if (isset($_POST['delete'])) {
+                $model->deleteUser($_POST['id']);
+            }
+            if (isset($_POST['editNow'])) {
+                $model->editUser($_POST['id']);
+            }
         }
         $this->output($model->users);
     }
