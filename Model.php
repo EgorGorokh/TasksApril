@@ -8,13 +8,16 @@ class Model
     public $gender;
     public $position;
 
-    public function __construct($name,$email,$gender,$position)
+    public function __construct(){
+        $this->users = DataBase::$mysql->query("SELECT * FROM `users`");
+    }
+    public function construct_Parametrs($name, $email, $gender, $position)
     {
         $this->users = DataBase::$mysql->query("SELECT * FROM `users`");
-        $this->name=$name;
-        $this->email=$email;
-        $this->gender=$gender;
-        $this->position=$position;
+        $this->name = $name;
+        $this->email = $email;
+        $this->gender = $gender;
+        $this->position = $position;
     }
 
     public function addUser()

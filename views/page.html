@@ -23,7 +23,7 @@
             <option>inactive</option>
             <option>active</option>
         </select>
-        <input class="submit" type="submit" id="submit" name="addUser" value="Add user"><br>
+        <input class="button" type="submit" id="submit" name="addUser" value="Add user"><br>
     </div>
 </form>
 <br><br><br>
@@ -47,8 +47,6 @@
                 <input type="submit" name="edit" value="Edit">
             </form>
         </td>
-
-
         {% if( field['id']==id) %}
     </tr>
     <tr>
@@ -56,15 +54,15 @@
             <td><input type="text" name="name" value="{{field['name']}}"></td>
             <td><input type="email" name="email" value="{{field['email']}}"></td>
             <td>
-                <select name="gender">
-                    <option>male</option>
-                    <option>female</option>
+                <select name="gender" >
+                    <option>{{field['gender']}}</option>
+                    <option>{% if(field['gender'])!='female' %} female {% endif %} {% if(field['gender'])!='male' %} male {% endif %}</option>
                 </select>
             </td>
             <td>
                 <select name="position">
-                    <option>inactive</option>
-                    <option>active</option>
+                    <option>{{field['position']}}</option>
+                    <option>{% if(field['position'])!='active' %} active {% endif %} {% if(field['position'])!='inactive' %} inactive {% endif %}</option>
                 </select>
             </td>
             <td><input type="hidden" name="id" value="{{field['id']}}"></td>
