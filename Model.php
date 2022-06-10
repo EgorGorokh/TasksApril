@@ -4,9 +4,9 @@ class Model
 {
     public $averageCheckAllTime;
     public $averageCheckToday;
-    public $table1;
-    public $table2;
-    public $table3;
+    public $tableCars;
+    public $tableCatalog;
+    public $marks;
 
     public function getAverageCheckAllTime()
     {

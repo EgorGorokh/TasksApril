@@ -27,6 +27,6 @@ class Controller
         $model->getMarks();
         $model->getTableCars();
         $model->getTableCatalog();
-        $this->output($model->averageCheckAllTime, $model->averageCheckToday, $model->table1, $model->table2, $model->table3);
+        $this->output($model->averageCheckAllTime, $model->averageCheckToday, $model->tableCars, $model->tableCatalog, $model->marks);
     }
 }

@@ -33,7 +33,7 @@
                     <td>Количество проданных автомобилей</td>
                 </tr>
 
-                {% for key, field in arr1 %}
+                {% for key, field in tableCars %}
                 <tr>
                     <td>{{field['dateOfSale']}}</td>
                     <td>{{field['coun']}}</td>
@@ -48,14 +48,14 @@
             <span :class="open ? &#39fa-chevron-down&#39 : &#39fa-chevron-up&#39" class="fas"></span>
         </div>
         <div x-show.transition.in.duration.800ms="open" class="border p-4">
-            <table border="2">
+            <table border="2" class="table_border">
                 <tr>
                     <td>Модель автомобиля</td>
                     <td>Год выпуска</td>
                     <td>Цвет</td>
                     <td>Цена</td>
                     </td></tr>
-                {% for key, field in arr2 %}
+                {% for key, field in tableCatalog %}
                 <tr>
                     <td>{{field['model']}}</td>
                     <td>{{field['releaseDate']}}</td>
@@ -74,7 +74,7 @@
         </div>
         <div x-show.transition.in.duration.800ms="open" class="border p-4">
             <ul>
-                {% for key, field in arr3 %}
+                {% for key, field in marks %}
                 <li>{{field['model']}}</li>
                 {% endfor %}
             </ul>
